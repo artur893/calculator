@@ -21,6 +21,7 @@ function operate(operator, a, b) {
     b = Number(b)
     switch (operator) {
         case "+":
+            console.log(sum(a, b))
             return sum(a, b)
         case "-":
             return subtract(a, b)
@@ -31,14 +32,12 @@ function operate(operator, a, b) {
     }
 }
 
-//CONNECTING BUTTONS TO SCREEN
+//CONNECTING BUTTONS TO SCREEN, HOLDING NUMBER
 
 let holdingNumber = ""
 const typed = document.querySelector(".typed")
 const key = document.querySelectorAll(".key")
-
-console.log(key)
-typed.textContent = holdingNumber
+const resultScreen = document.querySelector(".result")
 
 key[0].addEventListener("click", function () {
     holdingNumber = holdingNumber + "7"
@@ -80,3 +79,39 @@ key[13].addEventListener("click", function () {
     holdingNumber = holdingNumber + "0"
     typed.textContent = holdingNumber
 })
+
+//ADDING OPERATORS, CATCHING NUMBER FOR EQUALATION
+let operator
+let numberToEqual
+let result
+
+key[3].addEventListener("click", function () {
+    operator = "/"
+    numberToEqual = holdingNumber
+    holdingNumber = ""
+    typed.textContent = holdingNumber
+})
+key[7].addEventListener("click", function () {
+    operator = "*"
+    numberToEqual = holdingNumber
+    holdingNumber = ""
+    typed.textContent = holdingNumber
+})
+key[11].addEventListener("click", function () {
+    operator = "-"
+    numberToEqual = holdingNumber
+    holdingNumber = ""
+    typed.textContent = holdingNumber
+})
+key[15].addEventListener("click", function () {
+    operator = "+"
+    numberToEqual = holdingNumber
+    holdingNumber = ""
+    typed.textContent = holdingNumber
+})
+key[14].addEventListener("click", function(){
+    result = operate(operator, numberToEqual, holdingNumber)
+    resultScreen.textContent = (result)
+})
+
+console.log(key)

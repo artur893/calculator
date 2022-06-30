@@ -2,6 +2,7 @@
 
 body {
     background-color: darkgray;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 .container {
@@ -39,6 +40,10 @@ body {
     justify-content: center;
     align-items:center;
     border: solid;
+}
+.typed {
+    font-size: 40px;
+    justify-content: end;
 }
 
 /*BUTTONS RESET AND CLEAR*/
