@@ -1,0 +1,78 @@
+/*GENERAL*/
+
+body {
+    background-color: darkgray;
+}
+
+.container {
+    background-color: coral;
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid
+}
+
+/*SCREEN*/
+
+.top {
+    background-color: antiquewhite;
+    border: solid;
+    width: 370px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.result,
+.typed {
+    background-color: aquamarine;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: solid;
+}
+
+/*BUTTONS RESET AND CLEAR*/
+
+.middle {
+    background-color: blueviolet;
+    border: solid;
+    width: 370px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.clear,
+.delete {
+    background-color: aquamarine;
+    height: 80px;
+    width: 180px;
+}
+
+/*KEYBOARD*/
+
+.keys {
+    background-color: darkkhaki;
+    border: solid;
+    width: 370px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.key {
+    background-color: rgb(93, 97, 97);
+}
