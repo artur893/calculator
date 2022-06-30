@@ -37,7 +37,6 @@ function operate(operator, a, b) {
 let holdingNumber = ""
 const typed = document.querySelector(".typed")
 const key = document.querySelectorAll(".key")
-const resultScreen = document.querySelector(".result")
 
 key[0].addEventListener("click", function () {
     holdingNumber = holdingNumber + "7"
@@ -81,37 +80,65 @@ key[13].addEventListener("click", function () {
 })
 
 //ADDING OPERATORS, CATCHING NUMBER FOR EQUALATION
+
 let operator
 let numberToEqual
 let result
+const resultScreen = document.querySelector(".result")
 
 key[3].addEventListener("click", function () {
     operator = "/"
     numberToEqual = holdingNumber
     holdingNumber = ""
     typed.textContent = holdingNumber
+    resultScreen.textContent = (numberToEqual + " " + operator)
 })
 key[7].addEventListener("click", function () {
     operator = "*"
     numberToEqual = holdingNumber
     holdingNumber = ""
     typed.textContent = holdingNumber
+    resultScreen.textContent = (numberToEqual + " " + operator)
 })
 key[11].addEventListener("click", function () {
     operator = "-"
     numberToEqual = holdingNumber
     holdingNumber = ""
     typed.textContent = holdingNumber
+    resultScreen.textContent = (numberToEqual + " " + operator)
 })
 key[15].addEventListener("click", function () {
     operator = "+"
     numberToEqual = holdingNumber
     holdingNumber = ""
     typed.textContent = holdingNumber
+    resultScreen.textContent = (numberToEqual + " " + operator)
 })
 key[14].addEventListener("click", function(){
     result = operate(operator, numberToEqual, holdingNumber)
     resultScreen.textContent = (result)
 })
+
+//FUNCTION CLEAR AND DELETE
+
+const clear = document.querySelector(".clear")
+const deleteNumber = document.querySelector(".delete")
+
+clear.addEventListener("click", function(){
+    operator = ""
+    numberToEqual = ""
+    holdingNumber = ""
+    result = ""
+    typed.textContent = holdingNumber
+    resultScreen.textContent = (result)
+})
+
+deleteNumber.addEventListener("click", function(){
+    length = holdingNumber.length
+    deletedNumber = holdingNumber.slice(0, length - 1)
+    holdingNumber = deletedNumber
+    typed.textContent = holdingNumber
+} )
+
 
 console.log(key)
