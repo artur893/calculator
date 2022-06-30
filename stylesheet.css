@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    background-color: coral;
+    background-color: rgb(57,109,124);
     width: 400px;
     height: 550px;
     margin: auto;
@@ -21,7 +21,6 @@ body {
 /*SCREEN*/
 
 .top {
-    background-color: antiquewhite;
     border: solid;
     width: 370px;
     height: 100px;
@@ -34,7 +33,7 @@ body {
 
 .result,
 .typed {
-    background-color: aquamarine;
+    background-color: rgb(186,242,239);
     width: 360px;
     padding-right: 10px;
     display: flex;
@@ -60,7 +59,6 @@ body {
 /*BUTTONS RESET AND CLEAR*/
 
 .middle {
-    background-color: blueviolet;
     width: 370px;
     height: 80px;
     display: flex;
@@ -71,15 +69,21 @@ body {
 
 .clear,
 .delete {
-    background-color: aquamarine;
     height: 80px;
     width: 180px;
+}
+
+.clear {
+    background-color: rgb(231, 61, 61);
+}
+
+.delete {
+    background-color: rgb(37,124,163);
 }
 
 /*KEYBOARD*/
 
 .keys {
-    background-color: darkkhaki;
     width: 370px;
     height: 300px;
     display: grid;
@@ -88,5 +92,5 @@ body {
 }
 
 .key {
-    background-color: rgb(93, 97, 97);
+    background-color: rgb(162,210,223);
 }

@@ -114,9 +114,10 @@ key[15].addEventListener("click", function () {
     typed.textContent = holdingNumber
     resultScreen.textContent = (numberToEqual + " " + operator)
 })
-key[14].addEventListener("click", function(){
+key[14].addEventListener("click", function () {
     result = operate(operator, numberToEqual, holdingNumber)
     resultScreen.textContent = (result)
+    numberToEqual = result
 })
 
 //FUNCTION CLEAR AND DELETE
@@ -124,7 +125,7 @@ key[14].addEventListener("click", function(){
 const clear = document.querySelector(".clear")
 const deleteNumber = document.querySelector(".delete")
 
-clear.addEventListener("click", function(){
+clear.addEventListener("click", function () {
     operator = ""
     numberToEqual = ""
     holdingNumber = ""
@@ -133,12 +134,12 @@ clear.addEventListener("click", function(){
     resultScreen.textContent = (result)
 })
 
-deleteNumber.addEventListener("click", function(){
+deleteNumber.addEventListener("click", function () {
     length = holdingNumber.length
     deletedNumber = holdingNumber.slice(0, length - 1)
     holdingNumber = deletedNumber
     typed.textContent = holdingNumber
-} )
+})
 
 
 console.log(key)
