@@ -74,6 +74,10 @@ key[10].addEventListener("click", function () {
     holdingNumber = holdingNumber + "3"
     typed.textContent = holdingNumber
 })
+key[12].addEventListener("click", function () {
+    holdingNumber = holdingNumber + "."
+    typed.textContent = holdingNumber
+})
 key[13].addEventListener("click", function () {
     holdingNumber = holdingNumber + "0"
     typed.textContent = holdingNumber
@@ -140,6 +144,30 @@ deleteNumber.addEventListener("click", function () {
     holdingNumber = deletedNumber
     typed.textContent = holdingNumber
 })
+
+//ANIMATIONS
+
+
+for (i = 0; i < key.length; i++) {
+    key[i].addEventListener("mouseover", (e) =>
+        e.target.classList.add("highlighted"))
+    key[i].addEventListener("mouseout", (e) =>
+        e.target.classList.remove("highlighted"))
+}
+
+clear.addEventListener("mouseover", () =>
+clear.classList.add("highlightedClear"))
+clear.addEventListener("mouseout", () =>
+clear.classList.remove("highlightedClear"))
+
+deleteNumber.addEventListener("mouseover", () =>
+deleteNumber.classList.add("highlightedDelete"))
+deleteNumber.addEventListener("mouseout", () =>
+deleteNumber.classList.remove("highlightedDelete"))
+
+
+
+
 
 
 console.log(key)
